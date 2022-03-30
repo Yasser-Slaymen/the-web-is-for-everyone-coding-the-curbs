@@ -1,0 +1,367 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+  --lighter-blue:#524dd0;
+  --light-green: #00ffec;
+  --dark-blue: #110f2a ;
+  --gradient: linear-gradient(to right, #524dd0, #84389e);
+  --white: #fff;
+  --black: #000;
+  --text-color: #110f2a ;
+  --cta-color: linear-gradient(to right, #524dd0, #84389e);
+  --background-blue: 17, 15, 42;
+  --selection: #84389e;
+}
+
+body{
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #FDF6FF;
+    font-family:Rajdhani;
+
+}
+
+
+/* header */
+header{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--lighter-blue);
+    z-index: 100;
+    
+}
+/* togel-mobile */
+.toggle__button{
+    display: none;
+}
+
+#logo__nav{
+    width: 138px;
+    height: 45px;
+    margin: .3em;
+    
+}
+
+.link__nav{
+    font-family: 'Smooch Sans', sans-serif;
+    text-decoration-line: none;
+    color: white;
+    margin: .3em;
+}
+
+.link__nav:hover{
+    color: black;
+    cursor: pointer;
+}
+
+/* form */
+/* form */
+#form__container{
+    width: 40%;
+    margin: 1em;
+    background-color:#e2d9d5 ;
+}
+#form__container h1{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding: .3em;
+    color: white;
+    background-color: rgb(243, 172, 6);
+}
+.form__post{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95%;
+    margin: .5em;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:.3em;
+}
+
+input{
+    border: none;
+    font-size: 1em;
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 1px #00D7E9;
+}
+input:hover{
+    background-color:#ced6d6 ;
+}
+
+label{
+    font-size: 1em;
+    color: black;
+}
+/* form__button */
+.form__button{
+    display: flex;
+    justify-content: space-around;
+    margin: .5em;
+    cursor: pointer;
+}
+.btn--cancel,.btn--add,.btn--delete, .btn--edit{
+    border: none;
+    padding: .5em;
+    border-radius: 3px;
+    font-size: 1em;
+    color: white;
+    background-color:rgb(243, 172, 6);
+}
+
+.form__button :hover{
+    color: black;
+    transform: translateY(3px);
+    background-color:rgb(145, 109, 25) ;
+}
+
+.btn--delete:hover{
+    color: black;
+    transform: translateY(3px);
+    background-color:rgb(145, 109, 25) ;
+}
+
+
+/* footer */
+footer{
+    background-color: var(--dark-blue);
+}
+
+#footer__navigition{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    margin: 0 1em;
+}
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer__nav il{
+    margin: .5em;
+    color: var(--white);
+}
+.footer__nav il >a{
+    font-size: 1.2em;
+    color: var(--white);
+
+}
+
+.footer__nav il >a:hover{
+    color: var(--light-green);
+}
+
+.footer__pramarylogos{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.footer__pramarylogos img{
+    margin: .5em;
+}
+
+.footer__btn{
+    width:152px;
+    height: 45px;
+    border: none;
+    border-radius: .2em;
+    background-color: var(--light-green);
+    cursor: pointer;
+}
+.footer__btn:hover{
+    transform: translateY(.2em);
+    background-color: rgb(186, 243, 243);
+}
+
+.footer__btn a{
+   font-size: 1.2em;
+   text-decoration: none;
+}
+.footer__privacy{
+    margin-left:30%;
+   color: #fff;
+   font-size: 1.2em;
+  
+}
+.footer__privacy p{
+    padding: .5em;
+}
+
+.footer__privacy p a{
+    color: var(--white);
+}
+
+.footer__privacy p a:hover{
+    color: gold;
+} 
+
+@media (max-width:40em){
+    #logo__nav{
+        width: 86px;
+        height: 34px;
+        margin: .3em;
+        
+    }
+    /* toggel_baar */
+  .toggle__button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+   }
+ .toggle__button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 5px;
+  }
+
+ /* End_toggel */
+
+
+    .nav__baar{
+        position: absolute;
+        top:2.8em;
+        right:.1em;
+        display:none;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: flex-start;
+        width: 12em;
+        height:150px;
+        background-color: rgb(248, 245, 245);
+    }
+
+    nav>ul.active{
+        display: flex;
+        /* opacity: 1; */
+    }
+
+    .link__nav{
+        font-size: 1em;
+        color: #000;
+        padding: 1em;
+    }
+
+    
+   /* footer */
+   footer{
+       position: relative;
+       height:49vh;
+   }
+   #footer__navigition{
+      display: flex;
+      flex-direction: column;
+   }
+   .footer__nav{
+       margin: .1em;
+   }
+   .footer__pramarylogos{
+       display: flex;
+       flex-direction: row;
+       padding: .2em;
+   }
+   .footer__pramarylogos img{
+       margin:.2em;
+   }
+
+   .footer__btn{
+       width: 150px;
+       height:40px ;
+       padding: 1em;
+       margin: .5em;
+   }
+   .footer__privacy{
+       position: absolute;
+       top:80%;
+       font-size: 1em;
+      margin: 0 auto;
+       text-align: center;
+   }
+}
+/* states ui */
+
+/* loding state */
+
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loding_spinner{ 
+    width: 5em;
+    height: 5em;
+    margin: 0 auto;
+    margin-top:5em;
+    border:.3em solid #ddd;
+    border-radius: 50%;
+    border-top-color:rgb(0, 225, 255);
+    border-bottom-color: rgb(255, 115, 0);
+    animation:loding 1s linear infinite;
+    
+    
+}
+
+@keyframes loding{
+    100%{
+        transform: rotate(360deg);
+    
+    }
+}
+/* Empty-States */
+.EmptyStates{
+    display:grid;
+    place-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:100vw;
+    height:100vh;
+    background-color: #000;
+    z-index: 999999999999999;
+    
+    
+}
+.EmptyStates> img{
+   
+    
+    width: 30em;
+    height:30em;
+    
+  
+
+}
+/* active zonder js */
+.EmptyStates-none{
+    display: none;
+}

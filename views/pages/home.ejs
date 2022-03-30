@@ -1,0 +1,101 @@
+<%- include('../includes/head') %>
+<main>
+        
+    <section id="content__form_zones">
+
+        <section id="smarte__zones">
+            <h1>Smarte Zones Editing</h1>
+            <p class="selecte"></p>
+            </select>
+
+            <section class="content">
+
+
+            </section>
+            
+            
+
+        </section>
+
+         <!-- form section -->
+        <section id="form__container">
+        
+            <h1>Voeg informatie toe</h1>
+
+            <form   class="form__post"  action="https://codingthecurbs.api.fdnd.nl/v1/smartzone" method="post" mathod="patch" >
+
+                <div>
+
+                    <label for="smartzoneid">smart zoneID</label>
+                    <input type="number" id="smartzoneid-y">
+
+                 </div>
+
+                <div>
+
+                   <label for="name">Naam</label>
+                   <input type="text" id="name-y">
+
+                </div>
+
+                <div>
+                    <label for="stad">Stad</label>
+                    <input type="text" id="stad-y">
+                </div>
+
+                <div>
+                    <label for="locatie">Locatie</label>
+                    <input type="text" id="locatie-y">
+                </div>
+
+                <div>
+
+                    <label for="functie">Functie</label>
+                    <input type="text" id="functie-y">
+                 </div> 
+
+                <div>
+                    <label for="tijdstip">TijdStip</label>
+                    <input type="text" id="tijdstip-y">
+                </div>
+
+                <div>
+
+                    <label for="grootte">Grootte-plek</label>
+                    <input type="text" id="grootte-y">
+
+                </div>
+
+                <div>
+
+                    <label for="gebruik">Gebruik(%)</label>
+                    <input type="text" id="gebruik-y">
+                </div>
+
+                <div>
+
+                    <label for="omschrijving">Omschrijving</label>
+                    <input type="text" id="omschrijving-y">
+
+                </div>
+ 
+                <div>
+
+                    <label for="foto">Foto</label>
+                    <input type="text" id="foto-y">
+
+                </div>
+
+                <section class="form__button">
+                   <button class="btn--cancel">Cancel</button>
+                   <button class="btn--add" type="submit">Send</button>
+                </section>
+            
+             </form>
+
+        </section>
+
+    </section>
+
+</main>
+<%- include('../includes/footer') %>
