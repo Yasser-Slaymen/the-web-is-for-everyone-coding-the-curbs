@@ -1,6 +1,28 @@
 {
+  "name": "the-web-is-for-everyone-coding-the-curbs",
+  "version": "1.0.0",
+  "description": "this my 1st node project",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yasser-Slaymen/the-web-is-for-everyone-coding-the-curbs.git"
+  },
+  "author": "Yasser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yasser-Slaymen/the-web-is-for-everyone-coding-the-curbs/issues"
+  },
+  "homepage": "https://github.com/Yasser-Slaymen/the-web-is-for-everyone-coding-the-curbs#readme",
   "dependencies": {
-    "express": "^4.17.3"
-    
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
   }
 }
