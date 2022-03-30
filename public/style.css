@@ -18,7 +18,7 @@
 }
 
 body{
-    max-width: 1350px;
+    max-width: 1530px;
     margin: 0 auto;
     padding: 0;
     background-color: #FDF6FF;
@@ -29,10 +29,10 @@ body{
 
 /* header */
 header{
-    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     background-color: var(--lighter-blue);
     z-index: 100;
     
@@ -62,10 +62,10 @@ header{
 }
 
 /* form */
-/* form */
 #form__container{
+    position:relative;
     width: 40%;
-    margin: 1em;
+    margin: 1em auto;
     background-color:#e2d9d5 ;
 }
 #form__container h1{
