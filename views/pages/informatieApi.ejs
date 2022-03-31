@@ -1,0 +1,43 @@
+<%- include('../includes/head') %>
+<article id="smart__zones">
+   <select name="format" class="choos__samrtzone choos__smartzone---naam" onchange = "getNm(this.value)">
+            <option selected disabled >please choose an naam</option>
+                 <% smartzones.forEach((smartzone) => {%>
+            <option><%- smartzone.name%></option>
+
+      <%})%>
+
+   </select>
+
+   <select name="format" class="choos__samrtzone choos__smartzone---town" onchange = "getNm(this.value)">
+    <option selected disabled >please choose an city</option>
+
+         <% smartzones.forEach((smartzone) => {%>
+
+        <option><%- smartzone.town%></option><%})%>
+
+    </select>
+
+    <select name="format" class="choos__samrtzone choos__smartzone---id" onchange = "getNm(this.value)">
+        <option selected disabled >please choose an Id</option>
+    
+             <% smartzones.forEach((smartzone) => {%>
+    
+            <option><%- smartzone.smartzoneId%></option><%})%>
+    
+        </select>
+
+        <select name="format" class="choos__samrtzone choos__smartzone---function" onchange = "getNm(this.value)">
+            <option selected disabled >please choose an function</option>
+        
+                 <% smartzones.forEach((smartzone) => {%>
+        
+                <option><%- smartzone.function%></option><%})%>
+        
+            </select>
+</article>
+
+
+
+
+<%- include('../includes/footer') %>
