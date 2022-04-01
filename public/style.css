@@ -133,6 +133,43 @@ label{
     background-color:rgb(145, 109, 25) ;
 }
 
+/*selecte area  */
+#smart__zonestoetsen{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+.choos__samrtzone{
+    background-color: #00D7E9;
+    font-size: 1.2em;
+    border-radius: .3em;
+    max-width: 7em;
+    height: 2em;
+    margin: 1em;
+
+}
+#filter{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+/* img */
+.samrt__img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+
+}
+#smartzone__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+} 
+
 
 /* footer */
 footer{

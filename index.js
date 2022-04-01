@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-const port = 7000;
+const port =7000 ;
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
 // const Base_url = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 
@@ -28,6 +28,15 @@ app.get('/',(request, response) =>{
         })
     })
     // response.render('pages/home')
+})
+
+app.get('/naam/:naam', (request, response) => {
+    fetchJson('https://codingthecurbs.api.fdnd.nl/v1/smartzone')
+    .then(function(jsonData){
+        //hier filteren
+        //dan pagina renderen
+        response.render('detail')
+    })
 })
 
 app.listen(port, () =>{
