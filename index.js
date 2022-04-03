@@ -1,3 +1,4 @@
+const { request } = require('express');
 const express = require('express')
 const app = express();
 const port =7000 ;
@@ -22,7 +23,7 @@ app.get('/',(request, response) =>{
 
     fetchJson('https://codingthecurbs.api.fdnd.nl/v1/smartzone')
     .then(function(JsonData) {
-        response.render('pages/informatieApi', {
+        response.render('pages/smartzones', {
             title:'Smart Zones',
             smartzones: JsonData.data
         })
@@ -30,12 +31,14 @@ app.get('/',(request, response) =>{
     // response.render('pages/home')
 })
 
-app.get('/naam/:naam', (request, response) => {
-    fetchJson('https://codingthecurbs.api.fdnd.nl/v1/smartzone')
-    .then(function(jsonData){
-        //hier filteren
-        //dan pagina renderen
-        response.render('detail')
+app.get('/',(request,response) => {
+    fetchJson(`https://codingthecurbs.api.fdnd.nl/v1/smartzone/${request.params.name}`)
+    .then(function(JsonData){
+          response.render('pages/namen',{
+              title: 'Dit is sorteren bij name',
+              naam:JsonData.data[0]
+
+          })
     })
 })
 
