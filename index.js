@@ -1,9 +1,8 @@
 const { request } = require('express');
 const express = require('express')
 const app = express();
-const port =7000 ;
+// const port =7000 ;
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
-// const Base_url = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 
 
 
@@ -42,6 +41,7 @@ app.get('/zones/:smartzonesId',(request,response) => {
     })
 })
 
+const port = process.env.PORT || 7000
 app.listen(port, () =>{
     console.log(`listening to the port ${port}`)
 })
