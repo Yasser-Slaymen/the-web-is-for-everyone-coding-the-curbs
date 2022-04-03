@@ -31,12 +31,12 @@ app.get('/',(request, response) =>{
     // response.render('pages/home')
 })
 
-app.get('/',(request,response) => {
-    fetchJson(`https://codingthecurbs.api.fdnd.nl/v1/smartzone/${request.params.name}`)
+app.get('/zones/:smartzonesId',(request,response) => {
+    fetchJson(`https://codingthecurbs.api.fdnd.nl/v1/smartzone/${request.params.smartzonesId}`)
     .then(function(JsonData){
           response.render('pages/namen',{
               title: 'Dit is sorteren bij name',
-              naam:JsonData.data[0]
+              zones:JsonData.data[0]
 
           })
     })
