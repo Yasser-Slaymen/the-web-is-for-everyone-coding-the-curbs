@@ -7,73 +7,73 @@
         
             <h1>Voeg informatie toe</h1>
 
-            <form   class="form__post"  action="/smartzone" method="POST">
+            <form   class="form__post"  action="https://codingthecurbs.api.fdnd.nl/v1/smartzone" method="POST">
 
                 <div>
 
-                    <label for="smartzoneid">smart zoneID</label>
-                    <input type="number" id="smartzoneid-y">
+                    <label for="smartzoneid">smartzoneID</label>
+                    <input type="number" name="smartzoneId"  id="smartzoneid-y">
 
                  </div>
 
                 <div>
 
                    <label for="name">Naam</label>
-                   <input type="text" id="name-y">
+                   <input type="text" name="name" id="name-y">
 
                 </div>
 
                 <div>
                     <label for="stad">Stad</label>
-                    <input type="text" id="stad-y">
+                    <input type="text" name="town" id="stad-y">
                 </div>
 
                 <div>
                     <label for="locatie">Locatie</label>
-                    <input type="text" id="locatie-y">
+                    <input type="text" name="location" id="locatie-y">
                 </div>
 
                 <div>
 
                     <label for="functie">Functie</label>
-                    <input type="text" id="functie-y">
+                    <input type="text" name="function" id="functie-y">
                  </div> 
 
                 <div>
                     <label for="tijdstip">TijdStip</label>
-                    <input type="text" id="tijdstip-y">
+                    <input type="text" name="time" id="tijdstip-y">
                 </div>
 
                 <div>
 
                     <label for="grootte">Grootte-plek</label>
-                    <input type="text" id="grootte-y">
+                    <input type="text" name="size" id="grootte-y">
 
                 </div>
 
                 <div>
 
                     <label for="gebruik">Gebruik(%)</label>
-                    <input type="text" id="gebruik-y">
+                    <input type="text" name="utilization"  id="gebruik-y">
                 </div>
 
                 <div>
 
                     <label for="omschrijving">Omschrijving</label>
-                    <input type="text" id="omschrijving-y">
+                    <input type="text" name="description" id="omschrijving-y">
 
                 </div>
  
                 <div>
 
                     <label for="foto">Foto</label>
-                    <input type="text" id="foto-y">
+                    <input type="text" name="image" id="foto-y">
 
                 </div>
 
                 <section class="form__button">
                    <button class="btn--cancel">Cancel</button>
-                   <button class="btn--add" type="submit">Send</button>
+                   <button class="btn--add" type="submit" value="submit">Send</button>
                 </section>
             
              </form>

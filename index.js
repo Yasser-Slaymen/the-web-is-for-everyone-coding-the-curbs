@@ -1,8 +1,9 @@
 const { request } = require('express');
 const express = require('express')
 const bodyParser = require('body-parser')
+// Create application/ form- urlen coded parser
+const urlencodedParser = bodyParser.urlencoded({extended:false})
 const app = express();
-// const port =7000 ;
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
 
 // serve public files
@@ -44,12 +45,35 @@ app.get('/home',(request,response) =>{
     response.render('pages/home')
 })
 
-app.post("/smartzone", urlencodedParser,  (req, response) => {
-    console.log(req.body)
-    response.status(201).json({
-        message: 'Thing created successfully!'
-      });
+// app.post("/smartzone", urlencodedParser,  (req, response) => {
+//     console.log(req.body)
+//     response.status(201).json({
+//         message: 'Thing created successfully!'
+//       });
+// })
+
+// POST
+app.post('/home', urlencodedParser, (req,res) =>{
+    // Prepare output in JSON format
+    response = {
+        smartzonesId:req.body.smartzonesId,
+        name:req.body.name,
+        town:req.body.town,
+        location:req.body.location,
+        function:req.body.function,
+        time: req.body.time,
+        size:req.body.size,
+        utilization:req.body.utilization,
+        description:req.body.description,
+        image:req.body.image
+    }
+    console.log(response)
+    res.end(JSON.stringify(response))
+
 })
+
+
+
 
 
 const port = process.env.PORT || 7000
