@@ -1,10 +1,9 @@
 const { request } = require('express');
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express();
 // const port =7000 ;
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
-
-
 
 // serve public files
 app.use(express.static('public'))
@@ -45,8 +44,8 @@ app.get('/home',(request,response) =>{
     response.render('pages/home')
 })
 
-app.post("/smartzone", (request, response) => {
-    console.log(request.body)
+app.post("/smartzone", urlencodedParser,  (req, response) => {
+    console.log(req.body)
     response.status(201).json({
         message: 'Thing created successfully!'
       });
