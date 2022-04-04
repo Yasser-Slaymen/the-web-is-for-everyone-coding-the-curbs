@@ -112,7 +112,7 @@ label{
     margin: .5em;
     cursor: pointer;
 }
-.btn--cancel,.btn--add,.btn--delete, .btn--edit{
+.btn--cancel,.btn--add {
     border: none;
     padding: .5em;
     border-radius: 3px;
@@ -131,6 +131,24 @@ label{
     color: black;
     transform: translateY(3px);
     background-color:rgb(145, 109, 25) ;
+}
+
+.inhoude__content--button{
+    margin: 1.5em;
+    display: flex;
+    justify-content:center;
+
+}
+
+.btn--delete, .btn--edit{
+    margin: 1em;
+    border: none;
+    padding: .5em;
+    border-radius: 3px;
+    font-size: 1em;
+    color: white;
+    background-color: #524dd0;
+    text-decoration: none;
 }
 
 /*selecte area  */

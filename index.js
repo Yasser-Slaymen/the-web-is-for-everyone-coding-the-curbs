@@ -1,21 +1,25 @@
 const { request } = require('express');
 const express = require('express')
 const bodyParser = require('body-parser')
-// Create application/ form- urlen coded parser
-const urlencodedParser = bodyParser.urlencoded({extended:false})
 const app = express();
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
+// Create application/ form- urlen coded parser
+const urlencodedParser = bodyParser.urlencoded({extended:false})
+// test
+// const smartzones = require('./pagnes/smatsones').smartzones;
 
 // serve public files
 app.use(express.static('public'))
 app.use('/assets', express.static('assets'))
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // hook up tamplats engine
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
 
-
+// Method:GET
 
 // identification route
 app.get('/',(request, response) =>{
@@ -45,14 +49,7 @@ app.get('/home',(request,response) =>{
     response.render('pages/home')
 })
 
-// app.post("/smartzone", urlencodedParser,  (req, response) => {
-//     console.log(req.body)
-//     response.status(201).json({
-//         message: 'Thing created successfully!'
-//       });
-// })
-
-// POST
+// Method:POST
 app.post('/home', urlencodedParser, (req,res) =>{
     // Prepare output in JSON format
     response = {
@@ -70,6 +67,15 @@ app.post('/home', urlencodedParser, (req,res) =>{
     console.log(response)
     res.end(JSON.stringify(response))
 
+})
+
+// Method:DELETE
+app.delete('/smartzones:smartzoneId',(request,response) =>{
+    const smartzoneId = request.params.smartzoneId;
+    smartzones.delete(smartzoneId,(err) =>{
+        if(err)return next(err);
+        response.send(pages/smartzones)
+    })
 })
 
 

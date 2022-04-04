@@ -49,7 +49,7 @@
 
     <% 
      smartzones.filter(smartzone =>{
-           return smartzone.name === 'Wafa' 
+           return smartzone.name === 'Sarah' 
       })
      .map(smartzone =>{%> 
 
@@ -57,33 +57,42 @@
 
          <article id="smartzone__content">
 
-           <section class=".inhoude__content">
+           <section class="inhoude__content">
                <h3>smartzoneid</h3>
                <p><%- smartzone.smartzoneId %></p>
             </section>
 
-           <section class=".inhoude__content">
+           <section class="inhoude__content">
                 <h3>Naam</h3>
                 <p><%- smartzone.name %></p>
            </section>
 
-            <section class=".inhoude__content">
+            <section class="inhoude__content">
                 <h3>Stad</h3>
              <p><%- smartzone.town %></p>
             </section>
 
-            <section class=".inhoude__content">
+            <section class="inhoude__content">
                 <h3>functie</h3>
                 <p><%- smartzone.function %></p>
+            </section>inhoude__content inhoude__content
+
+            <section class="inhoude__content inhoude__content--button">
+                <a href="#"  class="btn--delete" id="delete-post">delete</a>
+                <a href="#"  class="btn--edit" id="edit-post">Edite</a>
             </section>
     
         </article>
 
          <article id="samrtzone___img">
                 <img src="<%- smartzone.image %>" alt="" class="samrt__img">
+
          </article>
 
+         
+
     <%})%>
+      
 
 </section>
 
