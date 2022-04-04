@@ -40,6 +40,18 @@ app.get('/zones/:smartzonesId',(request,response) => {
           })
     })
 })
+// renderen home page in de link
+app.get('/home',(request,response) =>{
+    response.render('pages/home')
+})
+
+app.post("/smartzone", (request, response) => {
+    console.log(request.body)
+    response.status(201).json({
+        message: 'Thing created successfully!'
+      });
+})
+
 
 const port = process.env.PORT || 7000
 app.listen(port, () =>{

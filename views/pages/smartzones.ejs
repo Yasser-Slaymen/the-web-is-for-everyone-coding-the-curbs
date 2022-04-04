@@ -29,14 +29,19 @@
     
         </select>
 
-        <select name="format" class="choos__samrtzone choos__smartzone---function" onchange = "getNm(this.value)">
+        <p class="choos__samrtzone choos__smartzone---link">
+            <a  href="/home">formulier Bewerken</a>
+
+        </p>
+
+        <!-- <select name="format" class="choos__samrtzone choos__smartzone---function" onchange = "getNm(this.value)">
             <option selected disabled >function</option>
         
                  <% smartzones.forEach((smartzone) => {%>
         
                 <option><%- smartzone.function%></option><%})%>
         
-            </select>
+            </select> -->
 </article>
 
 <!-- content -->
@@ -71,7 +76,6 @@
                 <h3>functie</h3>
                 <p><%- smartzone.function %></p>
             </section>
-            <a href="../pages/home">naar namen page</a>
     
         </article>
 

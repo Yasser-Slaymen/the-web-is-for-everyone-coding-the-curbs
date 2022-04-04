@@ -148,6 +148,21 @@ label{
     margin: 1em;
 
 }
+.choos__smartzone---link{
+    font-size:1.2em ;
+    font-weight: bolder;
+    max-width: 10em;
+    height: 2em;
+    
+    
+
+}
+.choos__smartzone---link>a{
+    text-decoration: none;
+   
+    
+}
+
 #filter{
     display: flex;
     flex-direction:row;
