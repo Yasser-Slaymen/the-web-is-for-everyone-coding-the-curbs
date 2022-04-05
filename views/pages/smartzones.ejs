@@ -3,10 +3,11 @@
 
 <!-- lists chooses -->
 <article id="smart__zonestoetsen">
-   <select name="format" class="choos__samrtzone choos__smartzone---naam" onchange = "getNm(this.value)">
-            <option selected disabled >naam</option>
+
+   <select name="format" class="choos__samrtzone choos__smartzone---naam" onchange = "window.location = this.value">
+            <option value="/">naam</option>
                  <% smartzones.forEach((smartzone) => {%>
-            <option><%- smartzone.name%></option>
+            <option value="<%- smartzone.name %>"><%- smartzone.name%></option>
 
       <%})%>
 
@@ -50,7 +51,7 @@
 
     <% 
      smartzones.filter(smartzone =>{
-           return smartzone.name === 'Sarah' 
+           return smartzone.name === 'Wafa'
       })
      .map(smartzone =>{%> 
 
