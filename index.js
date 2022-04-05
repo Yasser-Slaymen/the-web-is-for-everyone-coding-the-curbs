@@ -92,7 +92,3 @@ async function fetchJson(url) {
       .catch((error) => error)
   }
 
-//   onchang
-function getNm(value){
-    console.log(value)
-}
