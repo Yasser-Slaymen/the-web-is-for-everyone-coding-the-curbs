@@ -19,6 +19,7 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 
 
+
 // Method:GET
 
 // identification route
@@ -63,17 +64,47 @@ app.post('/add', urlencodedParser, (request,response) =>{
 
 })
 
-// renderen add page in de link
+//  Post renderen add page in de link
 app.get('/add',(request,response) => {
     response.render('pages/add', {
         title: 'add new post',
     })
 })
 
-// Methode: DELETE
+// Methode: PUT
+
+// routes for put 
+// app.put('/smartzones:smartzoneId',(request,response) =>{
+//    [request.params.smartzoneId] = (request.body)
+//    response.json(request.body)
+// })
+
+app.put('/smartzones:smartzoneId', urlencodedParser, (request,response) =>{
+
+    const postData = {
+        method:'PUT',
+        body:JSON.stringify(request.body),
+        headers:  {'Content-Type': 'application/json'}
+
+    }
+
+    fetchJson(BaseUrl, postData).then(function () {
+        response.render('pages/add', {
+          title: 'edit ',
+        })
+      })
+
+})
+
+//  Post renderen add page in de link
+app.get('/smartzones',(request,response) => {
+    response.render('pages/add', {
+        title: 'edtite',
+    })
+})
 
 
-// Server
+// Start Server
 const port = process.env.PORT || 7000
 app.listen(port, () =>{
     console.log(`listening to the port ${port}`)
