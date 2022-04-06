@@ -47,6 +47,7 @@ app.get('/zones/:smartzonesId',(request,response) => {
 
 
 // Method:POST
+
 app.post('/add', urlencodedParser, (request,response) =>{
 
     const postData = {
@@ -64,12 +65,40 @@ app.post('/add', urlencodedParser, (request,response) =>{
 
 })
 
-//  Post renderen add page in de link
+//  Post renderen add(poste) page in de link
 app.get('/add',(request,response) => {
     response.render('pages/add', {
         title: 'add new post',
     })
 })
+
+// Methode:PUT
+
+app.post('/edite', urlencodedParser, (request,response) =>{
+
+    const postData = {
+        method:'PUT',
+        body:JSON.stringify(request.body),
+        headers:  {'Content-Type': 'application/json'}
+
+    }
+
+    fetchJson(BaseUrl, postData).then(function () {
+        response.render('pages/edite', {
+          title: 'Edite',
+        })
+      })
+
+})
+
+
+//  renderen  page put in de link
+app.get('/edite',(request,response) => {
+    response.render('pages/edite', {
+        title: 'edite',
+    })
+})
+
 
 // Methode: Delete
 

@@ -127,11 +127,7 @@ label{
     background-color:rgb(145, 109, 25) ;
 }
 
-.btn--delete:hover{
-    color: black;
-    transform: translateY(3px);
-    background-color:rgb(145, 109, 25) ;
-}
+
 
 .inhoude__content--button{
     margin: 1.5em;
@@ -160,25 +156,35 @@ label{
 .choos__samrtzone{
     background-color: #00D7E9;
     font-size: 1.2em;
+    font-weight: bolder;
     border-radius: .3em;
     max-width: 7em;
     height: 2em;
     margin: 1em;
 
 }
-.choos__smartzone---link{
-    font-size:1.2em ;
+
+.choos__smartzone---linke{
+    background-color: #00D7E9;
+    font-size: 1.2em;
     font-weight: bolder;
+    border-radius: .3em;
     max-width: 10em;
     height: 2em;
+    margin: 1em;
+    padding: .3em;
     
-    
-
 }
-.choos__smartzone---link>a{
-    text-decoration: none;
-   
-    
+a{
+    text-align:center ;
+    text-decoration: none; 
+}
+
+
+a:hover{
+    color: rgb(240, 226, 226);
+    transform: translateY(3px);
+    background-color:rgb(57, 152, 241) ;
 }
 
 #filter{
