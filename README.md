@@ -3,14 +3,8 @@
 # Titel
 The web is for everyone-coding the curbs
 
-## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
+![Screenshot (4)](https://user-images.githubusercontent.com/90189815/162079511-f3da01b2-cb6b-4b7b-8792-cad14e6eb26f.png)
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
