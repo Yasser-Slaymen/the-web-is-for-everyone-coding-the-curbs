@@ -33,6 +33,12 @@ app.get('/',(request, response) =>{
         })
     })
 })
+// Render smartzones file for button
+app.get('/',(request,response) => {
+    response.render('pages/smartzones', {
+        title: 'add new post',
+    })
+})
 
 app.get('/zones/:smartzonesId',(request,response) => {
     fetchJson(`${BaseUrl}/${request.params.smartzonesId}`)
@@ -44,6 +50,7 @@ app.get('/zones/:smartzonesId',(request,response) => {
           })
     })
 })
+
 
 
 // Method:POST
