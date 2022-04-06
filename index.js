@@ -71,35 +71,29 @@ app.get('/add',(request,response) => {
     })
 })
 
-// Methode: PUT
+// Methode: Delete
 
-// routes for put 
-// app.put('/smartzones:smartzoneId',(request,response) =>{
-//    [request.params.smartzoneId] = (request.body)
-//    response.json(request.body)
-// })
 
-app.put('/smartzones:smartzoneId', urlencodedParser, (request,response) =>{
-
+app.post('/delete', urlencodedParser, (request,response) =>{
     const postData = {
-        method:'PUT',
+        method:'DELETE',
         body:JSON.stringify(request.body),
         headers:  {'Content-Type': 'application/json'}
 
     }
 
     fetchJson(BaseUrl, postData).then(function () {
-        response.render('pages/add', {
-          title: 'edit ',
+        response.render('pages/delete', {
+          title: 'delete ',
         })
       })
 
 })
 
-//  Post renderen add page in de link
-app.get('/smartzones',(request,response) => {
-    response.render('pages/add', {
-        title: 'edtite',
+//  renderen  page Delete in de link
+app.get('/delete',(request,response) => {
+    response.render('pages/delete', {
+        title: 'delete',
     })
 })
 
