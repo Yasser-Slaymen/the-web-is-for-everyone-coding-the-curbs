@@ -151,6 +151,18 @@ label{
     text-decoration: none;
 }
 
+/* Delete pag  */
+.delet__smartzone{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+}
+.form__delete{
+    margin-top:vh;
+    margin-bottom: 18vh;
+}
+
 /*selecte area  */
 #smart__zonestoetsen{
     display: flex;

@@ -1,13 +1,13 @@
 <%- include('../includes/head') %>
 
         
-
+<h2 class="delet__smartzone">Hier kun je smartzones verwijderen bij ID</h2>
     <!-- form section -->
    <section id="form__container">
    
-       <h1>Bewerken informatie toe</h1>
+       <h1>Delete Smartzone</h1>
 
-       <form   class="form__post" action="/delete"  method="post">
+       <form   class="form__post form__delete" action="/delete"  method="post">
 
            <div>
 
@@ -22,7 +22,7 @@
               <input type="text" name="name" id="name-y">
 
            </div>
-
+<!-- 
            <div>
                <label for="stad">Stad</label>
                <input type="text" name="town" id="stad-y">
@@ -69,7 +69,7 @@
                <label for="foto">Foto</label>
                <input type="text" name="image" id="foto-y">
 
-           </div>
+           </div> -->
 
            <section class="form__button">
               <button class="btn--cancel"><a href="/">Backe</a></button>
