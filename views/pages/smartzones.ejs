@@ -1,13 +1,13 @@
 <%- include('../includes/head') %>
 
 
-<!-- lists chooses -->
+<!--  The mager lists chooses -->
 <article id="smart__zonestoetsen">
 
-   <select name="format" class="choos__samrtzone choos__smartzone---naam" onchange = "window.location = this.value">
+   <select class="choos__samrtzone choos__smartzone---naam" onchange = "window.location.herf = this.value">
             <option value="/">naam</option>
                  <% smartzones.forEach((smartzone) => {%>
-            <option value="<%- smartzone.name %>"><%- smartzone.name%></option>
+            <option value="/smartzones/name/<%- smartzone.smartzoneId %>"><%- smartzone.name%></option>
 
       <%})%>
 
@@ -27,7 +27,7 @@
 
     <a class="choos__smartzone---linke" href="/add">Nieuwe Zone</a>
     <a class="choos__smartzone---linke" href="/edite">Editing Zone</a>
-    <a class="choos__smartzone---linke" href="/delete">Delete ZON</a>
+    <a class="choos__smartzone---linke" href="/delete">Delete Zone</a>
 
 
 </article>
@@ -36,14 +36,11 @@
 <section id="filter">
 
     <% 
-     smartzones.filter(smartzone =>{
-           return smartzone.name === 'Wafa'
-      })
+     smartzones.filter(smartzone => smartzone.name === 'Sarah')
+
      .map(smartzone =>{%> 
 
- 
-
-         <article id="smartzone__content">
+        <article id="smartzone__content">
 
            <section class="inhoude__content">
 

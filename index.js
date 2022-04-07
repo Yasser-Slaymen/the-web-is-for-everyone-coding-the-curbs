@@ -33,23 +33,37 @@ app.get('/',(request, response) =>{
         })
     })
 })
-// Render smartzones file for button
-app.get('/',(request,response) => {
-    response.render('pages/smartzones', {
-        title: 'add new post',
-    })
-})
 
-app.get('/zones/:smartzonesId',(request,response) => {
-    fetchJson(`${BaseUrl}/${request.params.smartzonesId}`)
+// render smartzones page for mager button in name page
+// app.get('/nav',(request,response) => {
+//     response.render('/pages/', {
+//         title: 'add new',
+//     })
+// })
+
+// filter bij naam
+app.get('/name',(request,response) => {
+
+    fetchJson(BaseUrl)
+    // fetchJson(`${BaseUrl}/${request.params.smartzoneId}`)
+
     .then(function(JsonData){
-          response.render('pages/namen',{
+        console.log(JsonData)
+          response.render('pages/name',{
               title: 'Dit is sorteren bij name',
-              zones:JsonData.data[0]
+              name:JsonData.data
 
           })
     })
 })
+
+// Render name page
+app.get('/name',(request,response) => {
+    response.render('pages/name', {
+        title: 'add new post',
+    })
+})
+
 
 
 

@@ -1,0 +1,19 @@
+<%- include('../includes/head') %>
+<srction id="filter">
+   <article>
+
+    <% name.filter(name =>name.name === 'Sarah').map((name =>{%>
+        <h2><%- name.name %> </h2>
+        <h2><%- name.town %> </h2>
+        <h2><%- name.time %> </h2>
+
+        <%})) %> 
+
+      <!-- <% name.forEach((name) => {%>
+        
+        <h2><%- name.name %> </h2>
+        <%})%>  -->
+   </article>
+</srction>
+
+<%- include('../includes/footer') %>
