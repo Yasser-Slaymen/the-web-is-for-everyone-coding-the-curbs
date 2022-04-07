@@ -20,7 +20,7 @@ Dit is de repo voor Coding the curbs waar de content wordt gernderd met behulp v
  ### Cloning the repository
   gh repo clone Yasser-Slaymen/the-web-is-for-everyone-coding-the-curbs
 ## Bronnen
-* COding the curbs API
+* Coding the curbs API
 
 ## Licentie
 
