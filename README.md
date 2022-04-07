@@ -3,18 +3,18 @@
 
 
 ![Screenshot (4)](https://user-images.githubusercontent.com/90189815/162079511-f3da01b2-cb6b-4b7b-8792-cad14e6eb26f.png)
-
+🌏 https://yasser-slaymen.github.io/the-web-is-for-everyone-coding-the-curbs/
 ## Beschrijving
 Dit is de repo voor Coding the curbs waar de content wordt gernderd met behulp van REST API
 
 
 ## Kenmerken
-* HTML
-* CSS
-* JavaScript
-* NodeJs 
-* Ejs
-* Express
+* 🤖 HTML
+* 🤖 CSS
+* 🤖  JavaScript
+* 🤖 NodeJs 
+* 🤖  Ejs
+* 🤖  Express
 
 ## Installatie
 
