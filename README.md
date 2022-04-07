@@ -17,10 +17,11 @@ Dit is de repo voor Coding the curbs waar de content wordt gernderd met behulp v
 * 🤖  Express
 
 ## Installatie
-
-## Gebruik
+* ### Cloning the repository
+* https://github.com/Yasser-Slaymen/the-web-is-for-everyone-coding-the-curbs.git
 
 ## Bronnen
+* COding the curbs API
 
 ## Licentie
 
