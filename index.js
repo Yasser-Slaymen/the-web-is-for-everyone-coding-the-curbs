@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // hook up tamplats engine
 app.set('view engine', 'ejs')
-app.set('views', './views')
+app.set('views','views')
 
 
 
