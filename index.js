@@ -34,12 +34,6 @@ app.get('/',(request, response) =>{
     })
 })
 
-// render smartzones page for mager button in name page
-// app.get('/nav',(request,response) => {
-//     response.render('/pages/', {
-//         title: 'add new',
-//     })
-// })
 
 // filter bij naam
 app.get('/name',(request,response) => {
