@@ -8,7 +8,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 const urlencodedParser = bodyParser.urlencoded({extended:false})
 
 
-// serve public files 
+// server public files 
 app.use(express.static('public'))
 app.use('/assets', express.static('assets'))
 app.use(bodyParser.urlencoded({ extended: true }));
