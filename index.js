@@ -29,7 +29,7 @@ app.get('/',(request, response) =>{
     .then(function(JsonData) {
         response.render('pages/smartzones', {
             title:'Smart Zones',
-            : JsonData.data
+            smartzones: JsonData.data
         })
     })
 })
