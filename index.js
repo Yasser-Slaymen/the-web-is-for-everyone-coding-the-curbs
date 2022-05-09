@@ -147,8 +147,14 @@ app.listen(port, () =>{
 
 })
 
-async function fetchJson(BaseUrl, postData = {}) {
-    return await fetch(BaseUrl, postData)
+// async function fetchJson(url) {
+//     return await fetch(url)
+//       .then((response) => response.json())
+//       .catch((error) => error);
+//   }
+
+async function fetchJson(url, postData = {}) {
+    return await fetch(url, postData)
       .then((response) => response.json())
       .catch((error) => error)
 }
