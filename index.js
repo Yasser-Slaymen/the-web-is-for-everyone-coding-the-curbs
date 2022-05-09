@@ -33,7 +33,6 @@ app.get('/',(request, response) =>{
         })
     })
 })
-smartzones
 
 // filter bij naam
 app.get('/name',(request,response) => {
